@@ -6,7 +6,7 @@ This plugin allows the user to enter a color's hex code and returns the compleme
 
 ## Quick Start
 
-1. Clone Repository
+1. Clone repository
    
 ```bash
 gh repo clone danielkhuu/figma-plugin-complementary-colors
