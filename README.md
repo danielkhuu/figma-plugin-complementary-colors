@@ -2,6 +2,8 @@
 
 This plugin allows the user to enter a color's hex code and returns the complementary color's hex code. 
 
+![alt text](ComplementaryColorsDemo.png)
+
 ## Quick Start
 
 1. Clone Repository
