@@ -23,7 +23,7 @@ pnpm build
 
 3. Import and run the plugin via the Figma Desktop App
 
-Plugins > Development > Import plugin from manifest... 
+   Plugins > Development > Import plugin from manifest... 
 
 ## License
 
