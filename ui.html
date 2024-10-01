@@ -1,5 +1,38 @@
-<h2>Complementary Color</h2>
-<p>Hex Code: <input id="hexCode" type="text" value="000000"></p>
-<button id="create">Generate</button>
+<h2>Complementary Colors</h2>
+<p>Hex Code: <input id="hexCode" type="text" value=""></p>
+<button id="generate">Generate</button>
 <button id="clear">Clear</button>
 <p>Complementary Color: <input id="compColor" type="text" value=""></p>
+<script>
+
+    function getComplementaryColor(hex) {    
+      // Convert hexadecimal to decimal 
+      let r = parseInt(hex.substring(0, 2), 16);
+      let g = parseInt(hex.substring(2, 4), 16);
+      let b = parseInt(hex.substring(4, 6), 16);
+    
+      // Complementary RGB values
+      r = 255 - r;
+      g = 255 - g;
+      b = 255 - b;
+    
+      // Convert back to hexadecimal 
+      const complementaryColor = r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
+      
+      return complementaryColor.toUpperCase();
+    }
+    
+    document.getElementById('generate').onclick = () => {
+      const hexTextbox = document.getElementById('hexCode');
+      let hexCode = hexTextbox.value.trim();
+    const complementaryColor = getComplementaryColor(hexCode);
+    document.getElementById('compColor').value = complementaryColor;
+    }
+    
+    document.getElementById('clear').onclick = () => {
+      document.getElementById('hexCode').value = '';
+      document.getElementById('compColor').value = '';
+    }
+    
+</script>
+    
