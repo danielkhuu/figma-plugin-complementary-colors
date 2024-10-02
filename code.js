@@ -1,5 +1,1 @@
-figma.showUI(__html__);
-
-figma.ui.onmessage =  (msg) => {
-  figma.closePlugin();
-};
+figma.showUI(__html__, { width: 400, height: 200 });

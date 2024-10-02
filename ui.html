@@ -25,9 +25,16 @@
     document.getElementById('generate').onclick = () => {
       const hexTextbox = document.getElementById('hexCode');
       let hexCode = hexTextbox.value.trim();
-    const complementaryColor = getComplementaryColor(hexCode);
-    document.getElementById('compColor').value = complementaryColor;
+    
+      // Validate if the input is a valid hex code
+      if (/^([0-9A-F]{6})$/i.test(hexCode)) {
+        const complementaryColor = getComplementaryColor(hexCode);
+
+        // Update the Complementary Color output field
+        document.getElementById('compColor').value = complementaryColor;
+      } 
     }
+
     
     document.getElementById('clear').onclick = () => {
       document.getElementById('hexCode').value = '';
